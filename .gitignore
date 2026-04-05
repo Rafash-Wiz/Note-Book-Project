@@ -1,18 +1,19 @@
 # Ignore everything at the repo root by default.
 *
 
-# Keep git metadata and this ignore file.
+# Keep git metadata, this ignore file, and the repo README.
 !.gitignore
+!README.md
 
 # Track the actual project folder.
-!293-keeper-app-part-1-challenge/
-!293-keeper-app-part-1-challenge/**
+!Note-Book-App/
+!Note-Book-App/**
 
 # Ignore generated files inside the project.
-293-keeper-app-part-1-challenge/node_modules/
-293-keeper-app-part-1-challenge/dist/
-293-keeper-app-part-1-challenge/.vite/
-293-keeper-app-part-1-challenge/.DS_Store
-293-keeper-app-part-1-challenge/.env
-293-keeper-app-part-1-challenge/.env.*
-293-keeper-app-part-1-challenge/*.log
+Note-Book-App/node_modules/
+Note-Book-App/dist/
+Note-Book-App/.vite/
+Note-Book-App/.DS_Store
+Note-Book-App/.env
+Note-Book-App/.env.*
+Note-Book-App/*.log

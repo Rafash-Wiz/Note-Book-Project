@@ -18,6 +18,11 @@ export default function NoteCreator(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
+    props.onAdd(newNote);
+    setNewNote({
+      noteTitle: "",
+      noteContent: "",
+    });
   }
 
   return (
@@ -36,15 +41,7 @@ export default function NoteCreator(props) {
         onChange={handleChange}
         value={newNote.noteContent}
       />
-      <button
-        onClick={() => {
-          (props.onAdd(newNote),
-            setNewNote({
-              noteTitle: "",
-              noteContent: "",
-            }));
-        }}
-      >
+      <button type="submit">
         +
       </button>
     </form>
