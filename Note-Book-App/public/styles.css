@@ -12,10 +12,20 @@ body {
 }
 
 header {
+  position: relative;
   background-color: rgb(127, 211, 94);
   margin: auto -16px;
-  padding: 16px 32px;
+  padding: 18px 32px;
   box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.3);
+}
+
+header .header-date-time {
+  position: absolute;
+  top: 12px;
+  right: 32px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.88rem;
+  text-align: right;
 }
 
 header h1 {
