@@ -36,7 +36,8 @@ footer p {
   color: #ccc;
 }
 .note {
-  background: #cdebc7;
+  position: relative;
+  background: white;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
@@ -54,3 +55,70 @@ footer p {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+form {
+  position: relative;
+  width: 420px;
+  margin: 32px auto 24px;
+  padding: 16px 18px 54px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 1.1em;
+  color: #333;
+  padding: 4px 0;
+  outline: none;
+}
+
+form input:first-of-type {
+  font-size: 1.15em;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+form textarea {
+  resize: none;
+  min-height: 96px;
+  line-height: 1.5;
+  margin-top: 0;
+  padding-top: 2px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #8a8a8a;
+}
+
+form button,
+.note button {
+  position: absolute;
+  right: 18px;
+  bottom: 0;
+  transform: translateY(50%);
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background: rgb(127, 211, 94);
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(127, 211, 94, 0.45);
+}
+
+form button:hover,
+.note button:hover {
+  background: rgb(108, 190, 76);
+}
+

@@ -1,12 +1,52 @@
-import React from 'react'
+import React, { useState } from "react";
 
-export default function NoteCreator() {
+export default function NoteCreator(props) {
+  const [newNote, setNewNote] = useState({
+    noteTitle: "",
+    noteContent: "",
+  });
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setNewNote((prevState) => {
+      return {
+        ...prevState,
+        [name]: value,
+      };
+    });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
   return (
-    <form>
-      <input type="text" placeholder='Give title'/>
-      <input type="text" placeholder='Your note'/>
-      <button> Add </button>
+    <form onSubmit={handleSubmit}>
+      <input
+        name="noteTitle"
+        type="text"
+        placeholder="Give a title for the note"
+        onChange={handleChange}
+        value={newNote.noteTitle}
+      />
+      <textarea
+        name="noteContent"
+        type="text"
+        placeholder="Give Your note"
+        onChange={handleChange}
+        value={newNote.noteContent}
+      />
+      <button
+        onClick={() => {
+          (props.onAdd(newNote),
+            setNewNote({
+              noteTitle: "",
+              noteContent: "",
+            }));
+        }}
+      >
+        +
+      </button>
     </form>
-  )
+  );
 }
-
