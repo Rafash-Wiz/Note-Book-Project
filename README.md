@@ -1,4 +1,4 @@
-# Keeper Notes App
+# Note Book App
 
 A simple React notes app built with Vite.
 
