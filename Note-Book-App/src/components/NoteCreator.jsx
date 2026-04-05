@@ -30,14 +30,14 @@ export default function NoteCreator(props) {
       <input
         name="noteTitle"
         type="text"
-        placeholder="Give a title for the note"
+        placeholder="Note title"
         onChange={handleChange}
         value={newNote.noteTitle}
       />
       <textarea
         name="noteContent"
         type="text"
-        placeholder="Give Your note"
+        placeholder="Note content"
         onChange={handleChange}
         value={newNote.noteContent}
       />
